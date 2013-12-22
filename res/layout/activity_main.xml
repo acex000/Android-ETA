@@ -1,0 +1,121 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/silver_back"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context=".MainActivity" >
+
+    <TextView
+        android:id="@+id/welcome"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/welcome"
+        android:textColor="#eeeeee"
+        android:textColorHighlight="#0000ff"
+        android:textSize="@dimen/dimen_25dp" />
+
+    <Button
+        android:id="@+id/view_triplist_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/welcome"
+        android:layout_marginBottom="50dp"
+        android:onClick="viewTripList"
+        android:text="@string/view_triplist_button" />
+
+    <TextView
+        android:layout_width="fill_parent"
+        android:layout_height="1dp"
+        android:layout_below="@id/view_triplist_button"        
+        android:background="#666666"
+        android:paddingBottom="2dp"
+        android:paddingTop="2dp" />
+
+    <TextView
+        android:id="@+id/upload_location_control"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/view_triplist_button"
+        android:paddingTop="@dimen/dimen_25dp"
+        android:text="@string/upload_location_control"
+        android:textSize="@dimen/dimen_25dp" />
+
+    <Button
+        android:id="@+id/start_uploadlocation_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upload_location_control"
+        android:onClick="startUploadLocation"
+        android:text="@string/start_upload" />
+
+    <Button
+        android:id="@+id/stop_uploadlocation_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/upload_location_control"
+        android:layout_marginBottom="30dp"
+        android:onClick="stopUploadLocation"
+        android:text="@string/stop_upload" />
+    
+    <ImageView
+        android:id="@+id/upload_status_off_image"
+        android:contentDescription="@string/upload_off"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stop_uploadlocation_button"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/service_off" />
+    
+    <ImageView
+        android:id="@+id/upload_status_on_image"
+        android:contentDescription="@string/upload_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/stop_uploadlocation_button"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/service_on"
+        android:visibility="invisible"  />
+    
+  <!--   <View android:id="@+id/border"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignBottom="@+id/service_off_text"
+    android:layout_alignLeft="@+id/service_off_text"
+    android:layout_alignRight="@+id/service_off_text"
+    android:layout_alignTop="@+id/service_off_text"
+    android:background="#000" /> -->
+    
+    <TextView
+        android:id="@+id/upload_off_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upload_status_off_image"
+        android:layout_centerHorizontal="true"
+        android:text="@string/upload_off" 
+        android:textColor="#ffffff"
+        android:background="#ff0000"
+        android:layout_margin="10dp" 
+        android:paddingLeft="3dp"
+        android:paddingRight="3dp"/>
+    
+    <TextView
+        android:id="@+id/upload_on_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/upload_status_off_image"
+        android:layout_centerHorizontal="true"
+        android:text="@string/upload_on" 
+        android:background="#00ff00"
+        android:layout_margin="10dp" 
+        android:paddingLeft="6dp"
+        android:paddingRight="6dp"
+        android:visibility="invisible" />
+    
+    
+
+</RelativeLayout>
